@@ -12,10 +12,9 @@
 
             <div class="table-responsive">
                 <% if (users != '') { %>
-                    <table class="table table-striped text-center my-3">
+                    <table class="table table-striped my-3">
                         <thead>
-                            <tr class="table-primary">
-                                <th>ID</th>
+                            <tr class="table-primary text-center">
                                 <th>Foto</th>
                                 <th>Nombre</th>
                                 <th>Correo Electronico</th>
@@ -25,12 +24,11 @@
                         </thead>
                         <tbody>
                             <% users.forEach((row,index) => { %>
-                                <tr class="align-middle">
-                                    <td><%= index %></td>
+                                <tr class="align-middle text-left">
                                     <td><img src="<%= row.image %>" width="50" alt="img-thumbnail"></td>
                                     <td><%= row.name %></td>
                                     <td><%= row.email %></td>
-                                    <td><%= row. phone %></td>
+                                    <td><%= row.phone %></td>
                                     <td>
                                         <a href="/edit/<%= row._id %>" class="text-primary"><i class="fas fa-edit fa-lg mx-1"></i></a>
                                         <a href="/delete/<%= row._id %>" class="text-danger"><i class="fas fa-trash fa-lg mx-1"></i></a>
@@ -40,7 +38,7 @@
                         </tbody>
                     </table>
                 <% }else{ %>
-                    <h1 class="text-center text-secondary mt-5">No users found in the database!</h1>
+                    <h1 class="text-center text-secondary mt-5">No existen usuarios registrados!</h1>
                 <% } %>
             </div>
         </div>

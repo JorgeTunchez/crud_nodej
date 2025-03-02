@@ -32,7 +32,7 @@ router.post('/add', upload, async (req, res) => {
 
         req.session.message = {
             type: 'success',
-            message: 'User added successfully!'
+            message: 'Usuario registrado exitosamente!'
         };
         res.redirect("/");
 
@@ -92,7 +92,7 @@ router.post('/update/:id', upload, async (req, res) => {
         // Mensaje de éxito en la sesión
         req.session.message = {
             type: 'success',
-            message: 'User updated successfully'
+            message: 'Usuario Actualizado exitosamente'
         };
 
         res.redirect("/");
@@ -120,7 +120,7 @@ router.get('/delete/:id', async (req, res) => {
         // Mensaje de éxito en la sesión
         req.session.message = {
             type: 'success',
-            message: 'User deleted successfully'
+            message: 'Usuario eliminado exitosamente'
         };
 
         res.redirect('/');
